@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DJATI_EAM", "DJATI_EAM\DJATI_EAM.csproj", "{579D17BF-E7B7-496D-A7BC-6E25C55FEC86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DJATI_EAM.Client", "DJATI_EAM.Client\DJATI_EAM.Client.csproj", "{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{579D17BF-E7B7-496D-A7BC-6E25C55FEC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579D17BF-E7B7-496D-A7BC-6E25C55FEC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579D17BF-E7B7-496D-A7BC-6E25C55FEC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579D17BF-E7B7-496D-A7BC-6E25C55FEC86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FF54001-89AD-4AE0-B43D-6D6510A4DE0E}
+	EndGlobalSection
+EndGlobal

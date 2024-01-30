@@ -1,0 +1,75 @@
+﻿@layout MainLayout
+@inherits LayoutComponentBase
+
+<MudLayout>
+    <HeaderMenu NavigationMenuDrawerOpen="_navigationMenuDrawerOpen"
+                ToggleNavigationMenuDrawer="ToggleNavigationMenuDrawer" />
+
+    <NavigationMenu DrawerOpen="_navigationMenuDrawerOpen"
+                    DrawerOpenChanged="NavigationMenuDrawerOpenChangedHandler" />
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="text-sm text-paragraph-text mb-4 mt-4">
+            <ErrorBoundary @ref="_errorBoundary">
+                <ChildContent>
+                    @Body
+                </ChildContent>
+            </ErrorBoundary>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+<style>
+    #blazor-error-ui {
+        background: lightyellow;
+        bottom: 0;
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+        display: none;
+        left: 0;
+        padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+        #blazor-error-ui .dismiss {
+            cursor: pointer;
+            position: absolute;
+            right: 0.75rem;
+            top: 0.5rem;
+        }
+
+</style>
+
+@code {
+    private bool _navigationMenuDrawerOpen = true;
+    private bool _themingDrawerOpen;
+
+    private ErrorBoundary? _errorBoundary { set; get; }
+
+    protected override void OnParametersSet()
+    {
+        ResetBoundary();
+    }
+
+    private void ResetBoundary()
+    {
+        // On each page navigation, reset any error state
+        _errorBoundary?.Recover();
+    }
+
+    protected void NavigationMenuDrawerOpenChangedHandler(bool state)
+    {
+        _navigationMenuDrawerOpen = state;
+    }
+
+    protected void ThemingDrawerOpenChangedHandler(bool state)
+    {
+        _themingDrawerOpen = state;
+    }
+
+    protected void ToggleNavigationMenuDrawer()
+    {
+        _navigationMenuDrawerOpen = !_navigationMenuDrawerOpen;
+    }
+}
