@@ -1,0 +1,38 @@
+﻿<MudDrawer Breakpoint="Breakpoint.Md" Elevation="0" Open="DrawerOpen" Class="border-r-2" OpenChanged="@(e => DrawerOpenChanged.InvokeAsync(e))" Variant="DrawerVariant.Responsive" Width="300px">
+    <MudDrawerHeader Class="flex items-center p-0">
+        <MudIcon Class="ml-6 mr-2" Color="@Color.Primary" Icon="@Icons.Custom.Brands.MudBlazor" Size="Size.Large" />
+        <MudText Typo="Typo.body1" Color="Color.Primary" Class="font-bold">DJATI Mining Management</MudText>
+    </MudDrawerHeader>
+
+    <MudNavMenu Margin="Margin.Normal" Color="@Color.Primary">
+        <MudNavLink Href="/" Icon="bx bxs-pie-chart-alt-2">Dashboard</MudNavLink>
+
+        <MudNavGroup Title="Asset Management" Expanded="true" IconColor="@Color.Dark" Icon="bx bxs-folder bx-sm">
+            <MudNavLink Href="/asset/asset-list-generic">Asset List Generic</MudNavLink>
+            <MudNavLink Href="/asset/asset-list">Asset List</MudNavLink>
+            <MudNavLink Href="/asset/asset-list-detail">Asset List Detail</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="Fleet Management System" Expanded="false" IconColor="@Color.Dark" Icon="bx bxs-car bx-sm">
+            <MudNavLink Href="#">Truck Tracking</MudNavLink>
+            <MudNavLink Href="#">Dump Truck Tracking</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="Supply Chain Management" Expanded="false" IconColor="@Color.Dark" Icon="bx bxs-factory">
+            <MudNavLink Href="#">Truck Tracking</MudNavLink>
+            <MudNavLink Href="#">Dump Truck Tracking</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="Hris Management" Expanded="false" IconColor="@Color.Dark" Icon="bx bxs-book-alt">
+            <MudNavLink Href="#">Truck Tracking</MudNavLink>
+            <MudNavLink Href="#">Dump Truck Tracking</MudNavLink>
+        </MudNavGroup>
+    </MudNavMenu>
+</MudDrawer>
+
+
+@code {
+    [EditorRequired][Parameter] public EventCallback<bool> DrawerOpenChanged { get; set; }
+
+    [EditorRequired][Parameter] public bool DrawerOpen { get; set; }
+}

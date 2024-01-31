@@ -13,4 +13,11 @@
     <PackageReference Include="MudBlazor" Version="6.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Fleet\" />
+    <Folder Include="Pages\Hris\" />
+    <Folder Include="Pages\Supply\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

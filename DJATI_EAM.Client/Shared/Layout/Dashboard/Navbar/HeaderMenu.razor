@@ -1,0 +1,34 @@
+﻿@using DJATI_EAM.Client.Shared.Layout.Dashboard.Navbar.Notification
+
+<MudAppBar Class="bg-white border-b-2" Elevation="0">
+    <MudTooltip Arrow="true" Text="Toggle Menu">
+        <MudToggleIconButton Color="@Color.Dark" Icon="bx bx-menu" Size="Size.Medium" Toggled="NavigationMenuDrawerOpen" ToggledChanged="ToggleNavigationMenuDrawer" ToggledColor="@Color.Dark" ToggledIcon="bx bx-x" />
+    </MudTooltip>
+
+    <MudHidden Breakpoint="Breakpoint.SmAndDown">
+        <MudInput T="string" @bind-Value="SearchValue" Placeholder="Search what you need" Adornment="Adornment.Start" AdornmentIcon="bx bx-search" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+
+        <MudSpacer />
+
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudTooltip Arrow="true" Text="Navigate to GitHub">
+                <MudIconButton Color="Color.Dark" Icon="bx bxl-github" Link="https://github.com/neozhu/CleanArchitectureWithBlazorServer" Target="_blank" />
+            </MudTooltip>
+
+            <ActivityNotificationsMenu />
+
+            <SystemNotificationsMenu />
+
+            <UserMenu OnSettingClick="OnSettingClick" />
+        </MudStack>
+    </MudHidden>
+</MudAppBar>
+
+
+@code {
+    [EditorRequired][Parameter] public bool NavigationMenuDrawerOpen { get; set; }
+    [EditorRequired][Parameter] public EventCallback ToggleNavigationMenuDrawer { get; set; }
+    [Parameter] public EventCallback<EventArgs> OnSettingClick { get; set; }
+
+    public string SearchValue { get; set; }
+}

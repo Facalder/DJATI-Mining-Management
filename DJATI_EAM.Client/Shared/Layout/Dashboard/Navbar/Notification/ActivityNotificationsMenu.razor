@@ -1,0 +1,22 @@
+﻿@inherits MudComponentBase
+
+<MudTooltip Arrow="true" Text="Activity">
+    <MudBadge Color="@Color.Secondary" Dot="true" Overlap="true" Visible="_newNotificationsAvailable">
+        <MudMenu Icon="bx bxs-bell" Color="@Color.Dark" AnchorOrigin="Origin.BottomLeft" TransformOrigin="Origin.TopCenter" DisableElevation="true" ListClass="p-2 docs-menu-list" LockScroll="true">
+            <div class="d-flex justify-space-between align-center px-2">
+                <MudText Typo="Typo.subtitle2" Class="font-semibold uppercase">Activity</MudText>
+
+                <MudButton Disabled="@(_newNotificationsAvailable == false)" StartIcon="@Icons.Material.Filled.DoneAll" Variant="Variant.Text" Color="Color.Primary" Class="ml-16 mr-n2">Mark Notifications</MudButton>
+            </div>
+
+            <div class="d-flex justify-center align-center px-2 py-8 relative">
+                <MudText Class="mud-text-secondary my-12">Nothing New :3</MudText>
+            </div>
+        </MudMenu>
+    </MudBadge>
+</MudTooltip>
+
+
+@code {
+    private bool _newNotificationsAvailable = false;
+}
