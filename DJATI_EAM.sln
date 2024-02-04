@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DJATI_EAM", "DJATI_EAM\DJAT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DJATI_EAM.Client", "DJATI_EAM.Client\DJATI_EAM.Client.csproj", "{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJATI_EAM.Shared", "DJATI_EAM.Shared\DJATI_EAM.Shared.csproj", "{D1DD9BEB-F45C-4416-B9D6-C4FF7EE76874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE06D26F-9A04-46A0-AF2D-5E2854566DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1DD9BEB-F45C-4416-B9D6-C4FF7EE76874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1DD9BEB-F45C-4416-B9D6-C4FF7EE76874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1DD9BEB-F45C-4416-B9D6-C4FF7EE76874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1DD9BEB-F45C-4416-B9D6-C4FF7EE76874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,12 +8,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DJATI_EAM.Client\DJATI_EAM.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
+    <ProjectReference Include="..\DJATI_EAM.Shared\DJATI_EAM.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
   </ItemGroup>
 
 </Project>
